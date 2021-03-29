@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">KittyQuizApp</string>
+    <string name="app_name">Kitty Quiz App</string>
+    <string name="hello_kitty_image_placeholder">Hello!</string>
+
+    <!-- Main Fragment strings -->
+    <string name="play_button_description">Play</string>
+    <string name="app_description">All rights belong to Kitty! Have a nice game!</string>
 </resources>
