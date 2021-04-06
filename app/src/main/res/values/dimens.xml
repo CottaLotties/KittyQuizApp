@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_margin">16dp</dimen>
+
+    <!-- Open fragment values -->
+    <dimen name="play_button_size">195dp</dimen>
+    <dimen name="play_button_margin">64dp</dimen>
+    <dimen name="play_button_padding_top">0dp</dimen>
+    <dimen name="open_fragment_kitty_height">221dp</dimen>
+    <dimen name="open_fragment_kitty_width">150dp</dimen>
+    <dimen name="open_fragment_title_text_size">48sp</dimen>
+    <dimen name="open_fragment_ps_text_size">16sp</dimen>
+    <dimen name="open_fragment_ps_margin_bottom">12dp</dimen>
+
+    <!-- Tests list values -->
+    <dimen name="tests_list_header_font_size">36sp</dimen>
+    <dimen name="tests_list_kitty_placeholder_size">100dp</dimen>
+    <dimen name="tests_list_kitty_placeholder_margin">10dp</dimen>
+
+    <!-- Tests list item values -->
+    <dimen name="tests_list_item_margin">16dp</dimen>
+    <dimen name="tests_list_item_icon_size">75dp</dimen>
+</resources>

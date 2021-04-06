@@ -2,7 +2,13 @@
     <string name="app_name">Kitty Quiz App</string>
     <string name="hello_kitty_image_placeholder">Hello!</string>
 
-    <!-- Main Fragment strings -->
+    <!-- Open fragment strings -->
     <string name="play_button_description">Play</string>
     <string name="app_description">All rights belong to Kitty! Have a nice game!</string>
+
+    <!-- Tests list Fragment strings -->
+    <string name="tests_list_header">Kitty tests</string>
+
+    <!-- Tests list item strings -->
+    <string name="tests_list_item_icon_placeholder">Test icon</string>
 </resources>

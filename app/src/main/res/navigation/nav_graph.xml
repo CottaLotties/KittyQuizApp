@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/openFragment">
+
+    <fragment
+        android:id="@+id/openFragment"
+        android:name="com.example.kittyquizapp.OpenFragment"
+        android:label="OpenFragment" >
+        <action
+            android:id="@+id/action_openFragment_to_testsListFragment"
+            app:destination="@id/testsListFragment"
+            app:enterAnim="@anim/fragment_fade_enter" />
+    </fragment>
+    <fragment
+        android:id="@+id/testsListFragment"
+        android:name="com.example.kittyquizapp.TestsListFragment"
+        android:label="fragment_tests_list"
+        tools:layout="@layout/fragment_tests_list" />
+</navigation>

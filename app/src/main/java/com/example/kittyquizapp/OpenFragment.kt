@@ -5,12 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.databinding.DataBindingUtil
 import com.example.kittyquizapp.databinding.FragmentOpenBinding
 
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+/* the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+private const val ARG_PARAM2 = "param2"*/
 
 class OpenFragment : Fragment() {
     /*private var param1: String? = null
@@ -33,6 +34,13 @@ class OpenFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         val binding = DataBindingUtil.inflate<FragmentOpenBinding>(inflater,
                 R.layout.fragment_open,container,false)
+        // setting onClickListener on play button to show the tests list fragment using navigation
+        // controller and directions
+        val btn = binding.root.findViewById<View>(R.id.play_button) as Button
+        btn.setOnClickListener {
+            val action = OpenFragmentDirections.actionOpenFragmentToTestsListFragment()
+            navController?.navigate(action)
+        }
         return binding.root
     }
 

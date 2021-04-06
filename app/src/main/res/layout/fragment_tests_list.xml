@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/pink">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/kavoon"
+        android:text="@string/tests_list_header"
+        android:textColor="@color/white"
+        android:textSize="@dimen/tests_list_header_font_size" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:name="com.example.kittyquizapp.TestsListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="LinearLayoutManager"
+        tools:context=".TestsListFragment"
+        tools:listitem="@layout/fragment_tests_item" />
+</LinearLayout>
+
+    <ImageView
+        android:layout_width="@dimen/tests_list_kitty_placeholder_size"
+        android:layout_height="@dimen/tests_list_kitty_placeholder_size"
+        android:contentDescription="@string/hello_kitty_image_placeholder"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/tests_list_kitty_placeholder_margin"
+        android:layout_marginLeft="@dimen/tests_list_kitty_placeholder_margin"
+        android:layout_marginTop="@dimen/tests_list_kitty_placeholder_margin"
+        android:layout_marginEnd="@dimen/tests_list_kitty_placeholder_margin"
+        android:layout_marginRight="@dimen/tests_list_kitty_placeholder_margin"
+        android:layout_marginBottom="@dimen/tests_list_kitty_placeholder_margin"
+        android:clickable="false"
+        app:srcCompat="@drawable/tests_list_kitty" />
+</RelativeLayout>
