@@ -5,7 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.navigation.findNavController
 
 import com.example.kittyquizapp.dummy.DummyContent.DummyItem
 
@@ -26,6 +28,11 @@ class TestRecyclerViewAdapter(
         val item = values[position]
         setPic(holder, item.content)
         holder.contentView.text = item.content
+        // onClickListener for a test item button to show the TestFragment for the selected test
+        holder.itemButton.setOnClickListener {
+            val action = TestsListFragmentDirections.actionTestsListFragmentToTestFragment(item.content)
+            holder.contentView.findNavController().navigate(action)
+        }
     }
 
     // temporary function to show the icons for the dummy test items
@@ -42,6 +49,7 @@ class TestRecyclerViewAdapter(
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val iconView: ImageView = view.findViewById(R.id.item_icon) // test item icon
         val contentView: TextView = view.findViewById(R.id.content) // test item name
+        val itemButton: LinearLayout = view.findViewById(R.id.test_item) // button to show the selected test
 
         override fun toString(): String {
             return super.toString() + " '" + contentView.text + "'"

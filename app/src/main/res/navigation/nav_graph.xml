@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/openFragment">
-
     <fragment
         android:id="@+id/openFragment"
         android:name="com.example.kittyquizapp.OpenFragment"
@@ -12,11 +11,38 @@
         <action
             android:id="@+id/action_openFragment_to_testsListFragment"
             app:destination="@id/testsListFragment"
-            app:enterAnim="@anim/fragment_fade_enter" />
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:popUpTo="@id/openFragment"
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/testsListFragment"
         android:name="com.example.kittyquizapp.TestsListFragment"
         android:label="fragment_tests_list"
-        tools:layout="@layout/fragment_tests_list" />
+        tools:layout="@layout/fragment_tests_list" >
+        <action
+            android:id="@+id/action_testsListFragment_to_testFragment"
+            app:destination="@id/testFragment"
+            app:popUpTo="@id/testsListFragment"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="testName"
+            app:argType="string"
+            android:defaultValue="cars" />
+    </fragment>
+    <fragment
+        android:id="@+id/testFragment"
+        android:name="com.example.kittyquizapp.TestFragment"
+        android:label="fragment_test"
+        tools:layout="@layout/fragment_test" >
+        <argument
+            android:name="testName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_testFragment_to_testsListFragment"
+            app:destination="@id/testsListFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/testsListFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
 </navigation>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="@dimen/play_button_padding_top"
+    android:layout_margin="@dimen/play_button_padding_top"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/play_button_padding_top"
+        android:layout_marginLeft="@dimen/play_button_padding_top"
+        android:paddingLeft="@dimen/finish_test_image_padding"
+        android:contentDescription="@string/hello_kitty_image_placeholder"
+        android:src="@drawable/kitty_winner_icon"
+        android:paddingStart="@dimen/finish_test_image_padding"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/good_luck_on_finish"
+        android:textColor="@color/black"
+        android:textSize="@dimen/open_fragment_ps_text_size"
+        android:layout_marginBottom="@dimen/open_fragment_ps_margin_bottom" />
+</LinearLayout>

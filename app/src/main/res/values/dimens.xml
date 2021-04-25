@@ -20,4 +20,10 @@
     <!-- Tests list item values -->
     <dimen name="tests_list_item_margin">16dp</dimen>
     <dimen name="tests_list_item_icon_size">75dp</dimen>
+
+    <!-- Test fragment values -->
+    <dimen name="test_item_height">125dp</dimen>
+
+    <!-- Finish test alert dialog values -->
+    <dimen name="finish_test_image_padding">50dp</dimen>
 </resources>

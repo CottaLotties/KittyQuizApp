@@ -11,4 +11,11 @@
 
     <!-- Tests list item strings -->
     <string name="tests_list_item_icon_placeholder">Test icon</string>
+
+    <!-- Test fragment strings -->
+    <string name="test_variant_placeholder">PIC</string>
+
+    <!-- Finish test alert dialog strings -->
+    <string name="good_luck_on_finish">Good luck next time!</string>
+    <string name="finish_test">Finish!</string>
 </resources>
